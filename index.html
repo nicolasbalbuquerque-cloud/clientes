@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Clientes (CRUD)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+
+    <main class="crud-container">
+        <header class="crud-header">
+            <div class="status-api-led" id="api-status"></div>
+            <h1>Controle de Clientes</h1>
+            <p>Integração síncrona com API externa usando métodos RESTFUL</p>
+        </header>
+
+        <section class="secao-formulario">
+            <form id="form-cliente" onsubmit="event.preventDefault();">
+                <div class="grupo-input">
+                    <label for="nome">Nome do Cliente</label>
+                    <input type="text" id="nome" placeholder="Ex: Nicolas Lennick" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="email">E-mail Corporativo</label>
+                    <input type="email" id="email" placeholder="nome@provedor.com" required>
+                </div>
+                <button type="button" id="btn-salvar">Cadastrar Cliente</button>
+            </form>
+        </section>
+
+        <section class="secao-listagem">
+            <h2>Clientes Registrados</h2>
+            
+            <div id="loader" class="spinner oculto"></div>
+            
+            <ul id="lista-clientes" class="lista-customizada">
+                </ul>
+            
+            <p id="lista-vazia" class="msg-vazia">Nenhum cliente cadastrado no servidor.</p>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>S

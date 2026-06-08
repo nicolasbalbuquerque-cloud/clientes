@@ -1,0 +1,197 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B0B0C;
+    color: #E2E8F0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card Container Principal */
+.crud-container {
+    background-color: #121214;
+    border: 1px solid #232329;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 580px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.crud-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.status-api-led {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+.status-api-led.erro {
+    background-color: #ef4444;
+    box-shadow: 0 0 8px #ef4444;
+}
+
+.crud-header h1 {
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.crud-header p {
+    color: #71717A;
+    font-size: 0.85rem;
+}
+
+/* Inputs e Botões do Formulário */
+.secao-formulario {
+    border-bottom: 1px dashed #232329;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.grupo-input {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #A1A1AA;
+    margin-bottom: 8px;
+}
+
+input {
+    background-color: #1A1A1E;
+    border: 1px solid #232329;
+    color: #FFFFFF;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF6B00;
+}
+
+button {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #E05E00;
+}
+
+/* Listagem de Clientes Retornados */
+.secao-listagem h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.lista-customizada {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cliente-item {
+    background-color: #1A1A1E;
+    border: 1px solid #232329;
+    padding: 16px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: abrir 0.2s ease-out;
+}
+
+.cliente-info strong {
+    display: block;
+    color: #E2E8F0;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.cliente-info span {
+    color: #71717A;
+    font-size: 0.85rem;
+}
+
+/* Botão de Excluir Compacto */
+.btn-excluir {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    width: auto;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+.btn-excluir:hover {
+    background-color: #EF4444;
+    color: #FFFFFF;
+}
+
+.msg-vazia {
+    text-align: center;
+    color: #71717A;
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+
+/* Loader de Rede */
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #232329;
+    border-top-color: #FF6B00;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: rodar 0.8s linear infinite;
+}
+
+.oculto {
+    display: none !important;
+}
+
+@keyframes rodar {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes abrir {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
